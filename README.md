@@ -1,2 +1,2 @@
 # jandreou.com
-James Andreou's website.
+My personal website. A blog will be added soon after updating the main page.

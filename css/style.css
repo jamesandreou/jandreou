@@ -1,0 +1,150 @@
+*{
+  font-family: 'Lora', serif;
+}
+
+body{
+  padding-top: 50px;
+}
+
+.row{
+  padding: 8px;
+}
+
+.email{
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.section:nth-child(odd){
+  background: #d5d5d5;
+  padding-top: 12px;
+  padding-bottom: 12px;
+}
+
+p{
+  font-size: 20px;
+}
+
+div.navbar-header button.navbar-toggle:focus{
+  background: #061539;
+  border: none;
+  outline: none;
+}
+
+div.navbar-header button.navbar-toggle{
+  border: none;
+  outline: none;
+}
+
+.navbar{
+  background: #061539;
+}
+
+.col-md-6{
+  padding: 4px;
+}
+
+.well{
+  background: #ff0000;
+  border: 2px solid black;
+}
+
+.well > *{
+  color: white;
+}
+
+.label-danger, .btn-danger{
+  border: 1px solid black;
+  background: #ff0000;
+}
+
+div.navbar-header a.navbar-brand, div.collapse ul.nav li a{
+  color: #ffffff;
+  font-family: 'Nunito', sans-serif;
+}
+
+div.collapse ul.nav a.current{
+  color: #7887ab;
+  font-family: 'Nunito', sans-serif;
+  -webkit-transition: all 0.7s ease;
+  -moz-transition: all 0.7s ease;
+  -o-transition: all 0.7s ease;
+  transition: all 0.7s ease;
+}
+
+div.navbar-header a.navbar-brand:hover, div.collapse ul.nav a:hover { 
+  color: #7887ab;
+}
+
+div.navbar-header a.navbar-brand:hover, div.collapse ul.nav a:focus { 
+  color: #ffffff;
+}
+
+h1{
+  text-align: center;
+  font-size: 48px;
+}
+
+h2{
+  text-align: center;
+  font-size: 24px;
+}
+
+h1, h2, h3, h4{
+  font-family: 'Nunito', sans-serif;
+}
+
+.statement{
+  font-size: 24px;
+}
+
+.footer{
+  background: #061539;
+}
+
+.footer > *{
+  color: white;
+}
+
+.btn-circle {
+  width: 70px;
+  height: 70px;
+  padding: 10px 16px;
+  font-size: 24px;
+  line-height: 1.33;
+  border-radius: 35px;
+  background: #7887ab;
+  border: none;
+}
+
+.btn-circle:hover{
+  background: #56659a;
+}
+
+.btn-circle:focus{
+  background: #7887ab;
+  border: none;
+  outline: none;
+}
+
+
+
+
+
+
+
+
+
+.skills > *{
+  display: block;
+  margin: 8px auto;
+  text-align: center;
+}
+
+.skill > p{
+  background-color: #ff0000;
+  color: #ffffff;
+  border-radius: 12px;
+  border: 1px solid #000000;
+  font-weight: bold;
+}
