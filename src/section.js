@@ -13,16 +13,13 @@ export class Section extends Component{
 	render(){
 		const style = {
 			background : this.props.even ? '#ffffff' : '#f9f9f9',
-			textAlign : 'center'
 		};
 		return (
-			<Grid fluid style={style}>
+			<Grid className='section' fluid style={style}>
 				<Row>
 					<h1><Label bsStyle="danger">{this.props.title}</Label></h1>
 				</Row>
-				<Row>
-					{this.props.children}
-				</Row>
+				{this.props.children}
 			</Grid>
 		);
 	}

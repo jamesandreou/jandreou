@@ -1,5 +1,5 @@
 *{
-	border-radius: 0 !important;
+  font-family: Nunito, sans-serif;
 }
 
 div.navbar-header button.navbar-toggle:focus{
@@ -15,22 +15,48 @@ div.navbar-header button.navbar-toggle{
 
 .navbar{
   background: #061539;
+  border-radius: 0;
 }
 
 div.navbar-header a.navbar-brand, div.collapse ul.nav li a{
   color: #ffffff;
-  font-family: 'Nunito', sans-serif;
 }
 
-div.collapse ul.nav a.current{
+div.collapse ul.nav a{
   color: #7887ab;
-  font-family: 'Nunito', sans-serif;
-  -webkit-transition: all 0.7s ease;
-  -moz-transition: all 0.7s ease;
-  -o-transition: all 0.7s ease;
-  transition: all 0.7s ease;
 }
 
 div.navbar-header a.navbar-brand:hover, div.collapse ul.nav a:hover { 
   color: #7887ab;
+}
+
+.label-danger, .btn-danger{
+  background: #ff0000;
+}
+
+.section{
+	text-align: center;
+	padding-bottom: 16px;
+}
+
+.skill{
+	background : #7ec0ee;
+	border-radius : 0px;
+	height: 100%;
+	width : 4%;
+	display: inline-block;
+}
+
+.bar{
+	text-align: left;
+}
+
+h4{
+	text-align: left;
+}
+
+@media only screen and (max-width: 480px) {
+	h4{
+		font-size: 12px;
+	}
 }

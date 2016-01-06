@@ -1,13 +1,14 @@
 import React, { Component } from 'react';
 import { Menu } from './menu';
 import { Section } from './section';
+import { About } from './about'
 
 export class Jandreou extends Component{
 
 	constructor(){
 		super();
 		this.sections = [
-			{name : 'About', content : (<h2>Incomplete!</h2>)},
+			{name : 'About', content : (<About />)},
 			{name : 'Education', content : (<h2>Incomplete!</h2>)},
 			{name : 'Projects', content : (<h2>Incomplete!</h2>)},
 			{name : 'Contact', content : (<h2>Incomplete!</h2>)}
