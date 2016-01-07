@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
 import { Menu } from './menu';
 import { Section } from './section';
-import { About } from './about'
+import { About } from './about';
+import { Education } from './education';
 
 export class Jandreou extends Component{
 
@@ -9,7 +10,7 @@ export class Jandreou extends Component{
 		super();
 		this.sections = [
 			{name : 'About', content : (<About />)},
-			{name : 'Education', content : (<h2>Incomplete!</h2>)},
+			{name : 'Education', content : (<Education />)},
 			{name : 'Projects', content : (<h2>Incomplete!</h2>)},
 			{name : 'Contact', content : (<h2>Incomplete!</h2>)}
 		];

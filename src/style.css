@@ -31,7 +31,7 @@ div.navbar-header a.navbar-brand:hover, div.collapse ul.nav a:hover {
 }
 
 .label-danger, .btn-danger{
-  background: #ff0000;
+  background: #EE5A28;
 }
 
 .section{
@@ -49,6 +49,31 @@ div.navbar-header a.navbar-brand:hover, div.collapse ul.nav a:hover {
 
 .bar{
 	text-align: left;
+}
+
+.term{
+	border-radius: 6px;
+	border: 1px solid #000000;
+	background: #EE5A28;
+	padding: 12px;
+}
+
+.term > .row > h3{
+	padding: 0px;
+}
+
+.term-text{
+	color: white;
+	padding: 0;
+}
+
+.course-text{
+	color: white;
+	text-align: left;
+}
+
+svg{
+	margin-top: 16px;
 }
 
 h4{
