@@ -53,13 +53,15 @@ div.navbar-header a.navbar-brand:hover, div.collapse ul.nav a:hover {
 
 .term{
 	border-radius: 6px;
-	border: 1px solid #000000;
+	border: 2px solid #000000;
 	background: #EE5A28;
 	padding: 12px;
+	margin-top: 12px;
 }
 
 .term > .row > h3{
 	padding: 0px;
+	margin: 0px;
 }
 
 .term-text{
@@ -68,8 +70,19 @@ div.navbar-header a.navbar-brand:hover, div.collapse ul.nav a:hover {
 }
 
 .course-text{
-	color: white;
+	cursor: pointer;
+	color: #ffffff;
 	text-align: left;
+	display: inline-block;
+	padding-top: 6px;
+}
+
+.learned{
+	background: #EE5A28;
+	color: #ffffff;
+	border: none;
+	padding: 0px;
+	padding-left: 10%;
 }
 
 svg{

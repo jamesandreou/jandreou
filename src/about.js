@@ -13,7 +13,7 @@ export class About extends Component{
 	render(){
 		return(
 			<Grid>
-				<Row><h3>I am a Full Stack Engineer and CS student at University of Waterloo.</h3></Row>
+				<Row><h3>I am a Software Engineer and CS student at University of Waterloo.</h3></Row>
 				<Row><h2>Languages</h2></Row>
 				<Skill name='Java' percent='0.8' />
 				<Skill name='JavaScript' percent='1' />

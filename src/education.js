@@ -22,8 +22,17 @@ export class Education extends Component{
 							Software Engineering Option, 
 							Combinatorics and Optimization Minor</h3></Row>
 				<Row><h2>Courses Taken</h2></Row>
+				<Row><h3>(Click a course to view what I Learned)</h3></Row>
 				<Row>
-					<Col xs={12} md = {6}> <Term term='1A' /> </Col>
+					<Col xs={12} md = {6}> <Term term='3B' /> </Col>
+					<Col xs={12} md = {6}> <Term term='3A' /> </Col>
+				</Row>
+				<Row>
+					<Col xs={12} md = {6}> <Term term='2B' /> </Col>
+					<Col xs={12} md = {6}> <Term term='2A' /> </Col>
+				</Row>
+				<Row>
+					<Col xs={12} md = {6}> <Term term='1B' /> </Col>
 					<Col xs={12} md = {6}> <Term term='1A' /> </Col>
 				</Row>
 			</Grid>

@@ -20,6 +20,66 @@ export class Term extends Component{
 					'PHYS 111',
 					'ECON 101'
 				]
+			},
+			'1B' : {
+				year : '14',
+				start : 'Jan',
+				end : 'April',
+				courses : [
+					'CS 136',
+					'MATH 136',
+					'MATH 138',
+					'PSYCH 101',
+					'MSCI 311'
+				]
+			},
+			'2A' : {
+				year : '14',
+				start : 'Sept',
+				end : 'Dec',
+				courses : [
+					'CS 246',
+					'CS 245',
+					'MATH 239',
+					'STAT 230',
+					'AFM 101'
+				]
+			},
+			'2B' : {
+				year : '15',
+				start : 'Jan',
+				end : 'April',
+				courses : [
+					'CS 240',
+					'CS 241',
+					'CS 251',
+					'STAT 231',
+					'ENGL 119'
+				]
+			},
+			'3A' : {
+				year : '15',
+				start : 'Sept',
+				end : 'Dec',
+				courses : [
+					'CS 341',
+					'CS 350',
+					'CS 348',
+					'CO 250',
+					'ECON 102'
+				]
+			},
+			'3B' : {
+				year : '16',
+				start : 'Jan',
+				end : 'April',
+				courses : [
+					'CS 456',
+					'CS 349',
+					'CS 447',
+					'CO 487',
+					'SCI 207'
+				]
 			}
 		};
 	}
