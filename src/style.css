@@ -1,5 +1,9 @@
 *{
-  font-family: Nunito, sans-serif;
+  font-family: 'Nunito', sans-serif;
+}
+
+body{
+	background: #061539;
 }
 
 div.navbar-header button.navbar-toggle:focus{
@@ -16,6 +20,7 @@ div.navbar-header button.navbar-toggle{
 .navbar{
   background: #061539;
   border-radius: 0;
+  margin: 0px;
 }
 
 div.navbar-header a.navbar-brand, div.collapse ul.nav li a{
@@ -45,10 +50,37 @@ div.navbar-header a.navbar-brand:hover, div.collapse ul.nav a:hover {
 	height: 100%;
 	width : 4%;
 	display: inline-block;
+	border: 2px solid #000000;
 }
 
 .bar{
 	text-align: left;
+}
+
+.row > .contact, .contact > *{
+	font-family: 'Lora', serif;
+	word-wrap: break-word;
+}
+
+.btn{
+	background: #EE5A28;
+	color: #ffffff;
+	border: 1px solid #000000;
+}
+
+.footer{
+	color: #ffffff;
+	text-align: left;
+	padding-top: 8px;
+	padding-bottom: 8px;
+}
+
+.up, .up:focus, .up:active{
+	background: #7887ab;
+	text-align: center;
+	border-radius: 100%;
+	color: #ffffff;
+	margin-top: 6px;
 }
 
 .term{
@@ -85,8 +117,36 @@ div.navbar-header a.navbar-brand:hover, div.collapse ul.nav a:hover {
 	padding-left: 10%;
 }
 
+.text > *, .text{
+	font-family: 'Lora', serif;
+	font-size: 20px;
+	padding-bottom: 8px;
+	text-align: left;
+}
+
+.text > a{
+	font-size: 20px;
+	font-family: 'Lora', serif !important;
+	text-decoration: none;
+}
+
+.stack{
+	border: 1px solid black;
+	border-radius: 4px;
+	display: inline-block;
+	background: #7ec0ee;
+	color: #ffffff;
+	margin-right: 6px;
+	margin-bottom: 6px;
+	padding: 4px;
+}
+
 svg{
 	margin-top: 16px;
+}
+
+h1{
+	font-size: 48px;
 }
 
 h4{

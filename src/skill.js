@@ -9,16 +9,10 @@ export class Skill extends Component{
 	}
 
 	renderBar(pct){
-		const nBars = Math.floor(pct * 20);
-		let bars = [];
-		for(let i = 0; i < nBars - 1; i++){
-			bars.push(<h4 key={2*i} className='skill'>&nbsp;</h4>);
-			bars.push(<h4 key={2*i+1} style={{width : '1%'}} className='skill'></h4>);
-		}
-		bars.push(<h4 key={2*nBars} className='skill'>&nbsp;</h4>);
+		let length = {width : pct*100 + '%'};
 		return(
 			<span>
-				{bars}
+				<h4 style={length} className='skill'>&nbsp;</h4>
 			</span>
 		);
 	}

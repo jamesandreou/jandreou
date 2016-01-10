@@ -3,6 +3,9 @@ import { Menu } from './menu';
 import { Section } from './section';
 import { About } from './about';
 import { Education } from './education';
+import { Project } from './project';
+import { Contact } from './contact';
+import { Footer } from './footer';
 
 export class Jandreou extends Component{
 
@@ -11,8 +14,11 @@ export class Jandreou extends Component{
 		this.sections = [
 			{name : 'About', content : (<About />)},
 			{name : 'Education', content : (<Education />)},
-			{name : 'Projects', content : (<h2>Incomplete!</h2>)},
-			{name : 'Contact', content : (<h2>Incomplete!</h2>)}
+			{name : 'Projects', content : [
+				(<Project key={1} project='graph'/>),
+				(<Project key={2} project='beugo' />)
+			]},
+			{name : 'Contact', content : (<Contact />)}
 		];
 	}
 
@@ -26,7 +32,8 @@ export class Jandreou extends Component{
 							{sec.content}
 						</Section>
 					);	
-				}, this)};
+				}, this)}
+				<Footer />
 			</div>
 		);
 	}

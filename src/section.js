@@ -15,7 +15,7 @@ export class Section extends Component{
 			background : this.props.even ? '#ffffff' : '#f9f9f9',
 		};
 		return (
-			<Grid className='section' fluid style={style}>
+			<Grid id={this.props.title} className='section' fluid style={style}>
 				<Row>
 					<h1><Label bsStyle="danger">{this.props.title}</Label></h1>
 				</Row>

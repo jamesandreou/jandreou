@@ -35,7 +35,7 @@ export class Course extends Component{
 		);
 		return(
 			<Row className='bar'>
-				<Col xs={11}>
+				<Col xs={12}>
 					<div className='course-text'
 						onTouch={this.handleClick.bind(this)} 
 						onClick={this.handleClick.bind(this)}>
@@ -81,9 +81,9 @@ export class Course extends Component{
 				title : 'Physics 1',
 				learned : [
 					'Linear Dynamics',
-					'Angluar Dynamics',
+					'Angular Dynamics',
 					'Energy',
-					'Angluar Momentum'
+					'Angular Momentum'
 				]
 			},
 			ECON101 : {
@@ -116,7 +116,7 @@ export class Course extends Component{
 			MSCI311 : {
 				title : "Organizational Design and Technology",
 				learned : [
-					'Design of Organization',
+					'Design of Organizations',
 					'Structures of Companies',
 					'Authority and Politics'
 				]

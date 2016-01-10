@@ -90,7 +90,7 @@ export class Term extends Component{
 		let end = this.terms[this.props.term].end;
 		return (
 			<div className='term'>
-				<Row><h3 className='term-text'>{start+' '+year+" - "+end+' '+year}</h3></Row>
+				<Row><h3 className='term-text'>{this.props.term + ' (' + start+' '+year+" - "+end+' '+year+')'}</h3></Row>
 				{this.terms[this.props.term].courses.map(function(c, i){
 					return (
 						<Course code={c.replace(' ', '')} key={i}/>
