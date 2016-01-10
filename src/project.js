@@ -47,7 +47,7 @@ export class Project extends Component{
 							directed / weighted edges, algorithms, tools, default graphs and more to come.
 						</div>),
 				stack : ['JavaScript', 'ReactJS', 'Node.js', 'C++ (Boost)', 'HTML5 Canvas'],
-				link : 'www.graphtoolbox.com',
+				link : 'http://www.graphtoolbox.com',
 				linkName : 'wwww.graphtoolbox.com'
 			},
 			beugo : {
