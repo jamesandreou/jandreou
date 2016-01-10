@@ -15,8 +15,7 @@ export class About extends Component{
 			<Grid>
 				<Row><h3>
 					I am a Software Engineer and CS student at University of Waterloo. I have a passion
-					for designing scalable, adaptable and efficient user interfaces with the latest technologies.
-
+					for using modern technologies to create scalable, adaptable, and efficient user interfaces.
 				</h3></Row>
 				<Row><h2>Languages</h2></Row>
 				<Skill name='Java' percent='0.8' />
