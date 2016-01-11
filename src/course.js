@@ -131,7 +131,7 @@ export class Course extends Component{
 				]
 			},
 			PSYCH101 : {
-				title : "Introductio to Psychology",
+				title : "Introduction to Psychology",
 				learned : [
 					'Clinical Psychology',
 					'Social Psychology',
