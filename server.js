@@ -4,6 +4,7 @@ var webpack = require('webpack');
 var config = require('./webpack.config.dev');
 var bodyParser = require("body-parser");
 var favicon = require('serve-favicon');
+var fs = require('fs');
 
 var app = express();
 app.use(bodyParser.json());      
@@ -20,10 +21,17 @@ app.use(require('webpack-dev-middleware')(compiler, {
 }));
 app.use(require('webpack-hot-middleware')(compiler));
 
-
-
+//routing
 app.get('/', function(req, res) {
   res.sendFile(path.join(__dirname, 'index.html'));
+});
+
+app.get('/resume', function(request, response){
+  var pdfPath = path.join(__dirname, 'src/assets/resume.pdf');
+  fs.readFile(pdfPath, function (err,data){
+     response.contentType("application/pdf");
+     response.send(data);
+  });
 });
 
 app.listen(app.get('port'), function(err) {

@@ -34,7 +34,7 @@ export class Contact extends Component{
 					<h3 className='contact'>
 						<img src={resume} />
 						<b><b>&nbsp;Resume:&nbsp;</b></b>
-						<Button href="" bsClass='btn'>Download PDF</Button>
+						<Button href="/resume" bsClass='btn'>Download PDF</Button>
 					</h3>
 				</Row>
 			</Grid>
