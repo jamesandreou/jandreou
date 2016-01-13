@@ -5,6 +5,8 @@ var config = require('./webpack.config.dev');
 var bodyParser = require("body-parser");
 var favicon = require('serve-favicon');
 var fs = require('fs');
+var basicAuth = require('basic-auth-connect');
+var info = require(path.join(__dirname, 'info.json'));
 
 var app = express();
 app.use(bodyParser.json());      
@@ -21,9 +23,20 @@ app.use(require('webpack-dev-middleware')(compiler, {
 }));
 app.use(require('webpack-hot-middleware')(compiler));
 
+//auth
+
+var auth = basicAuth(function(username,password,callback){
+  var result = (password === info.password);
+  callback(null, result);
+});
+
 //routing
 app.get('/', function(req, res) {
   res.sendFile(path.join(__dirname, 'index.html'));
+});
+
+app.get('/jobs', auth, function(req, res){
+  res.sendFile(path.join(__dirname, '/pages/jobs.html'));
 });
 
 app.get('/resume', function(request, response){
