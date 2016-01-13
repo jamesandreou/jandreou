@@ -22,7 +22,7 @@ export class Education extends Component{
 							Software Engineering Option, 
 							Combinatorics and Optimization Minor</h3></Row>
 				<Row><h2>Courses Taken</h2></Row>
-				<Row><h3>(Click a course to view what I Learned)</h3></Row>
+				<Row><h3>(Click a Course to View What I Have Learned)</h3></Row>
 				<Row>
 					<Col xs={12} md = {6}> <Term term='3B' /> </Col>
 					<Col xs={12} md = {6}> <Term term='3A' /> </Col>
