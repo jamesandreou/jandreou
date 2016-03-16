@@ -10,12 +10,15 @@ export class Card extends Component{
 	render(){
     let style = {
       height: this.props.height,
-      width: "300px",
-      background: "#"+((1<<24)*Math.random()|0).toString(16)
+      width: this.props.width
     }
 		return (
-		    <div style={style}>
-
+		    <div style={style} className={"card"}>
+          <div style={{
+            background: "#"+((1<<24)*Math.random()|0).toString(16),
+            width: "100%",
+            height: "100%"
+          }} />
         </div>
 		);
 	}
