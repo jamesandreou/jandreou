@@ -9,16 +9,11 @@ export class Card extends Component{
 
 	render(){
     let style = {
-      height: this.props.height,
-      width: this.props.width
+      height: this.props.height
     }
 		return (
 		    <div style={style} className={"card"}>
-          <div style={{
-            background: "#"+((1<<24)*Math.random()|0).toString(16),
-            width: "100%",
-            height: "100%"
-          }} />
+          {this.props.text}
         </div>
 		);
 	}

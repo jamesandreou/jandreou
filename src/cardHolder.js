@@ -4,74 +4,69 @@ import { Grid } from 'react-bootstrap';
 import { Col } from 'react-bootstrap';
 import { Row } from 'react-bootstrap';
 
+
 export class CardHolder extends Component{
 
 	constructor(){
 		super();
-    this.state = this.computeSizes();
-    this.heights = [];
+    this.testHeights = [];
     for(let i = 0; i < 20; i++){
-      this.heights.push(Math.floor(Math.random() * 600) + 300);
+      this.testHeights.push({t : i, h : Math.random() * 300 + 300})
     }
-    this.columns = this.partitionCards(this.state.nCols, this.heights);
+
+    this.cols = this.assignCardsToCols(window.innerWidth, this.testHeights);
+
 	}
 
 	render(){
     // Create columns/card components
-    const cols = this.columns.map(function(col, i){
-      return (
-        <Col key={i} md={Math.floor(12 / this.state.nCols)}>
-          {col.map(function(card, j){
-            return (
-              <Card
-                key={j}
-                width={this.state.cardWidth}
-                height={card}
-              />
-            );
-          }, this)}
-        </Col>
-      );
-    }, this);
-
+    const cards = this.createCardDOMLayout();
 
 		return (
-			<Grid>
+      <Grid fluid={true}>
         <Row>
-          {cols}
+          {cards}
         </Row>
       </Grid>
 		);
 	}
 
-  // Determines number of columns, and card width based on window width
-  // TODO nCols must be a factor of 12
-  computeSizes(){
-    const w = window.innerWidth;
-    let nCols = (w <= 400) ? 1 : Math.ceil(w / 400);
-    let cardWidth = (nCols == 1) ? w : Math.floor(w / nCols);
-    return {
-      nCols : nCols,
-      cardWidth : cardWidth
-    };
+  createCardDOMLayout(){
+    return this.cols.map(function(col, i){
+      return (
+        <Col key={i} xs={Math.floor(12 / this.cols.length)}>
+          {col.map(function(card, j){
+            return (
+              <Card key={j} height={card.h} text={card.t} />
+            )
+          }, this)}
+        </Col>
+      );
+    }, this);
   }
 
-  partitionCards(n, cards){
+  assignCardsToCols(w, cards){
+    // Calculate number of columns
+    const breakPoints = [0, 600, 900, 1200, 1600];
+    const nCols = breakPoints.reduce(function(a, b, i, arr) {
+      return (w > b) ? i : a;
+    }) + 1;
+    // Create array of columns
     let cols = [];
-    for(let i = 0; i < n; i++){
-      cols.push({ set : [], h : 0 });
+    for(let i = 0; i < nCols; i++){
+      cols.push({val : [], totalH : 0});
     }
-    // Greedy algroithm approach, works as well as needed
+    // Greedy assign cards
     for(let c of cards){
-      // Find set with lowest height and add card to it
-      let colToAdd = cols.reduce(function(prev, cur, i, arr){
-        return prev.h < cur.h ? prev : cur;
+      let minCol = cols.reduce(function(a, b, i, arr){
+        return a.totalH > b.totalH ? b : a;
       });
-      colToAdd.set.push(c);
-      colToAdd.h += c;
+      minCol.val.push(c);
+      minCol.totalH += c.h;
     }
-    return cols.map(function(c){
-      return c.set;
+
+    return cols.map(function(col, i){
+      return col.val;
     });
   }
 
