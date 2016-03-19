@@ -7,23 +7,46 @@ export class Card extends Component{
 
 	constructor(){
 		super();
-
 	}
 
 	render(){
-    const style = {
-      height: this.props.height
-    }
-		const header = this.createHeader("mozilla", "Mozilla", "Software Engineering Intern");
+		const d = this.props.data;
+		const banner = this.createBanner(d.type, d.date);
+		const header = this.createHeader(d.icon, d.title1, d.title2);
+		const content = this.createContent(d.data);
 		return (
-		    <Grid style={style} className={"card"}>
+		    <Grid className={"card"}>
 					{header}
+					{content}
+					{banner}
         </Grid>
 		);
 	}
 
+	createContent(data){
+		return (
+			<Row className='content'>
+				{data}
+			</Row>
+		);
+	}
+
+	createBanner(type, date){
+		const src = require('./assets/' + type + '.png');
+		return(
+			<Row className='line'>
+				<Col xs={3}>
+					<img src={src} />
+				</Col>
+				<Col xs={9}>
+					<div className={'date'}>{date}</div>
+				</Col>
+			</Row>
+		);
+	}
+
 	createHeader(icon, title1, title2){
-		const src = require('./assets/' + 'mozilla' + '.png');
+		const src = require('./assets/' + icon);
 		return(
 			<Row>
 				<Col xs={8}>

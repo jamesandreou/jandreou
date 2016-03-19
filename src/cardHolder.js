@@ -3,19 +3,14 @@ import { Card } from './card.js';
 import { Grid } from 'react-bootstrap';
 import { Col } from 'react-bootstrap';
 import { Row } from 'react-bootstrap';
+import Cards from './data/cardData.js';
 
 
 export class CardHolder extends Component{
 
 	constructor(){
 		super();
-    this.testHeights = [];
-    for(let i = 0; i < 20; i++){
-      this.testHeights.push({t : i, h : Math.random() * 300 + 300})
-    }
-
-    this.cols = this.assignCardsToCols(window.innerWidth, this.testHeights);
-
+    this.cols = this.assignCardsToCols(window.innerWidth, Cards);
 	}
 
 	render(){
@@ -40,7 +35,7 @@ export class CardHolder extends Component{
         <Col key={i} xs={Math.floor(12 / this.cols.length)}>
           {col.map(function(card, j){
             return (
-              <Card key={j} height={card.h} text={card.t} />
+              <Card key={j} data={card} />
             )
           }, this)}
         </Col>
@@ -65,7 +60,7 @@ export class CardHolder extends Component{
         return a.totalH > b.totalH ? b : a;
       });
       minCol.val.push(c);
-      minCol.totalH += c.h;
+      minCol.totalH += 1;
     }
 
     return cols.map(function(col, i){
