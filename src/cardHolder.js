@@ -24,7 +24,10 @@ export class CardHolder extends Component{
 
 		return (
       <Grid fluid={true}>
-        <Row>
+        <Row style={{padding: 20}}>
+          <div>Temporary Toolbar</div>
+        </Row>
+        <Row className={"cardHolder"}>
           {cards}
         </Row>
       </Grid>
