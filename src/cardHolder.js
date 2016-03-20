@@ -4,7 +4,7 @@ import { Filter } from './filter.js';
 import { Grid } from 'react-bootstrap';
 import { Col } from 'react-bootstrap';
 import { Row } from 'react-bootstrap';
-import Cards from './data/cardData.js';
+import Cards from './cardData.js';
 
 
 

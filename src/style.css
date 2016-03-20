@@ -2,6 +2,12 @@
   font-family: 'Neuton', serif;
 }
 
+.bar{
+  background: #DB4437;
+  border: 1px solid #000;
+  border-radius: 4px;
+}
+
 .container{
   width: 100%;
 }

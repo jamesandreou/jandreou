@@ -1,4 +1,78 @@
 import React from 'react';
+import { Term } from './term.js';
+import { Skill } from './skill.js';
+
+const COURSES = {
+  '3B' : [
+    'CS 456 - Computer Networks',
+    'CO 487 - Applied Cryptography',
+    'CS 447 - Software Testing',
+    'CS 349 - User Interfaces',
+    'SCI 207 - Physics, Universe, and Everything'
+  ],
+  '3A' : [
+    'CS 350 - Operating Systems',
+    'CS 341 - Algorithms',
+    'CS 348 - Database Management',
+    'CO 250 - Introduction to Optimization',
+    'ECON 102 Macroeconomics'
+  ],
+  '2B' : [
+    'CS 240 - Data Structures',
+    'CS 241 - Foundations of Sequential Programs',
+    'CS 251 - Computer Organization and Design',
+    'STAT 231 - Statistics',
+    'ENGL 119 - Communications in Computer Science'
+  ],
+  '2A' : [
+    'CS 246 - Object-Oriented Software Development',
+    'CS 245 - Logic and Computation',
+    'MATH 239 - Introduction to Combinatorics',
+    'STAT 230 - Probability',
+    'AFM 101 - Financial Accounting'
+  ],
+  '1B' : [
+    'CS 136 - Elementary Algorithm Design and Data Abstraction',
+    'MATH 136 - Linear Algebra',
+    'MATH 138 - Calculus 2',
+    'PSYCH 101 - Introduction to Psychology',
+    'MSCI 311 - Organizational Design and Technology'
+  ],
+  '1A' : [
+    'CS 135 - Designing Functional Programs',
+    'MATH 135 - Algebra',
+    'MATH 137 - Calculus 1',
+    'PHYS 111 - Physics 1',
+    'ECON 101 - Microeconomics'
+  ]
+};
+
+const SKILLS = {
+  'tech' : [
+    ['Android', 1],
+    ['Linux', 0.8],
+    ['Unix', 0.9],
+    ['SQL', 0.6],
+    ['GIT', 1],
+    ['OpenGL', 0.8]
+  ],
+  'frameworks' : [
+    ['ReactJS', 1],
+    ['JQuery', 1],
+    ['Boost', 0.4],
+    ['NodeJS', 1],
+    ['Saas', 0.8],
+    ['OpenSSL', 0.6]
+  ],
+  'languages' : [
+    ['JavaScript', 1],
+    ['Java', 1],
+    ['C++', 0.8],
+    ['Python', 0.4],
+    ['HTML 5', 1],
+    ['CSS 3', 1]
+  ]
+};
 
 let cards = [
   {
@@ -29,19 +103,11 @@ let cards = [
   },
   {
     'title1' : 'Term 3B',
-    'title2' : 'University of Waterloo, Computer Science',
+    'title2' : 'University of Waterloo, Honours Computer Science',
     'icon' : 'uw.png',
     'type' : 'school',
     'date' : 'Winter 2016',
-    'data' : (
-      <ul style={{listStyleType : 'disc'}}>
-        <li>CS 456 - Computer Networks</li>
-        <li>CO 487 - Applied Cryptography</li>
-        <li>CS 447 - Software Testing</li>
-        <li>CS 349 - User Interfaces</li>
-        <li>SCI 207 - Physics, Universe, and Everything</li>
-      </ul>
-    )
+    'data' : (<Term courses={COURSES['3B']} />)
   },
   {
     'title1' : 'Graph Toolbox',
@@ -82,16 +148,7 @@ let cards = [
     'icon' : 'laptop.png',
     'type' : 'skill',
     'date' : '',
-    'data' : (
-      <ul style={{listStyleType : 'disc'}}>
-        <li>JavaScript</li>
-        <li>Java</li>
-        <li>HTML 5</li>
-        <li>CSS 3</li>
-        <li>C++</li>
-        <li>Python</li>
-      </ul>
-    )
+    'data' : (<Skill skills={SKILLS['languages']} />)
   },
   {
     'title1' : 'Term 3A',
@@ -99,15 +156,7 @@ let cards = [
     'icon' : 'uw.png',
     'type' : 'school',
     'date' : 'Fall 2015',
-    'data' : (
-      <ul style={{listStyleType : 'disc'}}>
-        <li>CS 350 - Operating Systems</li>
-        <li>CS 341 - Algorithms</li>
-        <li>CS 348 - Database Management</li>
-        <li>CO 250 - Introduction to Optimization</li>
-        <li>ECON 102 Macroeconomics</li>
-      </ul>
-    )
+    'data' : (<Term courses={COURSES['3A']} />)
   },
   {
     'title1' : 'Frameworks',
@@ -115,16 +164,7 @@ let cards = [
     'icon' : 'react.png',
     'type' : 'skill',
     'date' : '',
-    'data' : (
-      <ul style={{listStyleType : 'disc'}}>
-        <li>ReactJS</li>
-        <li>JQuery</li>
-        <li>Boost</li>
-        <li>NodeJS</li>
-        <li>Sass</li>
-        <li>Open SSL</li>
-      </ul>
-    )
+    'data' : (<Skill skills={SKILLS['frameworks']} />)
   },
   {
     'title1' : 'Term 2B',
@@ -132,31 +172,15 @@ let cards = [
     'icon' : 'uw.png',
     'type' : 'school',
     'date' : 'Winter 2015',
-    'data' : (
-      <ul style={{listStyleType : 'disc'}}>
-        <li>CS 240 - Data Structures</li>
-        <li>CS 241 - Foundations of Sequential Programs</li>
-        <li>CS 251 - Computer Organization and Design</li>
-        <li>STAT 231 - Statistics</li>
-        <li>ENGL 119 - Communications in Computer Science</li>
-      </ul>
-    )
+    'data' : (<Term courses={COURSES['2B']} />)
   },
   {
     'title1' : 'Technologies',
-    'title2' : 'Operating Systems, Version Control, Graphics',
+    'title2' : 'Operating Systems, Version Control, Data Solutions',
     'icon' : 'android.png',
     'type' : 'skill',
     'date' : '',
-    'data' : (
-      <ul style={{listStyleType : 'disc'}}>
-        <li>Android</li>
-        <li>Linux</li>
-        <li>Unix</li>
-        <li>GIT</li>
-        <li>OpenGL</li>
-      </ul>
-    )
+    'data' : (<Skill skills={SKILLS['tech']} />)
   },
   {
     'title1' : 'Term 2A',
@@ -164,15 +188,7 @@ let cards = [
     'icon' : 'uw.png',
     'type' : 'school',
     'date' : 'Fall 2014',
-    'data' : (
-      <ul style={{listStyleType : 'disc'}}>
-        <li>CS 246 - Object-Oriented Software Development</li>
-        <li>CS 245 - Logic and Computation</li>
-        <li>MATH 239 - Introduction to Combinatorics</li>
-        <li>STAT 230 - Probability</li>
-        <li>AFM 101 - Financial Accounting</li>
-      </ul>
-    )
+    'data' : (<Term courses={COURSES['2A']} />)
   },
   {
     'title1' : 'Term 1B',
@@ -180,15 +196,7 @@ let cards = [
     'icon' : 'uw.png',
     'type' : 'school',
     'date' : 'Winter 2014',
-    'data' : (
-      <ul style={{listStyleType : 'disc'}}>
-        <li>CS 136 - Elementary Algorithm Design and Data Abstraction</li>
-        <li>MATH 136 - Linear Algebra</li>
-        <li>MATH 138 - Calculus 2</li>
-        <li>PSYCH 101 - Introduction to Psychology</li>
-        <li>MSCI 311 - Organizational Design and Technology</li>
-      </ul>
-    )
+    'data' : (<Term courses={COURSES['1B']} />)
   },
   {
     'title1' : 'Term 1A',
@@ -196,15 +204,7 @@ let cards = [
     'icon' : 'uw.png',
     'type' : 'school',
     'date' : 'Fall 2013',
-    'data' : (
-      <ul style={{listStyleType : 'disc'}}>
-        <li>CS 135 - Designing Functional Programs</li>
-        <li>MATH 135 - Algebra</li>
-        <li>MATH 137 - Calculus 1</li>
-        <li>PHYS 111 - Physics 1</li>
-        <li>ECON 101 - Microeconomics</li>
-      </ul>
-    )
+    'data' : (<Term courses={COURSES['1A']} />)
   }
 ]
 

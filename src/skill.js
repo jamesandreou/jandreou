@@ -8,22 +8,30 @@ export class Skill extends Component{
 		super();
 	}
 
-	renderBar(pct){
-		let length = {width : pct*100 + '%'};
-		return(
-			<span>
-				<h4 style={length} className='skill'>&nbsp;</h4>
-			</span>
+	render(){
+		return (
+			<div>
+				{this.props.skills.map(function(s, i){
+						return this.renderSkill(s, i);
+					}, this)}
+			</div>
 		);
 	}
 
-	render(){
+	renderBar(pct){
+		let length = {width : pct*100 + '%'};
 		return (
-			<Row>		
-				<Col xs={0} md={1} />
-				<Col xs={4} md={2}><h4>{this.props.name}</h4></Col>
-				<Col className='bar' xs={8} md={8}>{this.renderBar(this.props.percent)}</Col>
-				<Col xs={0} md={1} />
+				<div style={length} className='bar'>&nbsp;</div>
+		);
+	}
+
+	renderSkill(s, i){
+		return (
+			<Row key={i}>
+				<Col xs={1} />
+				<Col xs={4}>{s[0] + ":"}</Col>
+				<Col xs={6}>{this.renderBar(s[1])}</Col>
+				<Col xs={1} />
 			</Row>
 		);
 	}
