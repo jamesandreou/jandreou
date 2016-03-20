@@ -1,6 +1,8 @@
 import React from 'react';
 import { Term } from './term.js';
 import { Skill } from './skill.js';
+import { Stack } from './stack.js';
+import { Glyphicon } from 'react-bootstrap';
 
 const COURSES = {
   '3B' : [
@@ -82,11 +84,23 @@ let cards = [
     'type' : 'skill',
     'date' : '',
     'data' : (
-      <p>
-        I am a Software Engineer and Computer Science student at University of Waterloo.
-         I have a passion for using modern technologies to create scalable,
-         efficient user interfaces and backend solutions.
-      </p>
+      <div>
+        <p>
+          I am a Software Engineer and Computer Science student at University of Waterloo.
+           I have a passion for using modern technologies to create scalable,
+           efficient user interfaces and backend solutions.
+        </p>
+        <span>
+          <Glyphicon glyph='share-alt' />
+          <b>{' Email: '}</b>
+          <a href={'mailto:jandreou25@gmail.com'}>jandreou25@gmail.com</a>
+        </span>
+        <span>
+          <Glyphicon glyph='share-alt' />
+          <b>{' GitHub: '}</b>
+          <a href={'https://www.github.com/jamesandreou'}>www.github.com/jamesandreou</a>
+        </span>
+      </div>
     )
   },
   {
@@ -96,9 +110,13 @@ let cards = [
     'type' : 'work',
     'date' : 'Summer 2016',
     'data' : (
-      <p>Upcoming software engineer intern on the DOM team.
-      The DOM team is a subset of the platform team working on
-      the Gecko DOM implementation and JavaScript browser API.</p>
+      <div>
+        <p>This Summer I will be interning at Mozilla on the DOM team. The Firefox
+        DOM implementation and JavaScript browser API are some of the responsibilities
+        of the DOM team. I will update this block after completing the internship with more
+        details!</p>
+        <Stack stack={['C++', 'JavaScript', 'Python', 'Rust']} />
+      </div>
     )
   },
   {
@@ -116,14 +134,19 @@ let cards = [
     'type' : 'project',
     'date' : 'Summer 2015',
     'data' : (
-      <p>
-        <b>Description:</b> Created a web app to graphically create,
-        manipulate and run algorithms on graphs with ReactJS. The app
-        contains a <b>Planarity Testing</b> algorithm that finds a planar embedding
-        for a graph or shows the K5 / K3,3 minor. Features include creating
-        custom graphs with directed / weighted edges, algorithms, tools,
-        default graphs and more to come.
-      </p>
+      <div>
+        <p>
+          <b>Description:</b> Created a web app to graphically create,
+          manipulate and run algorithms on graphs with ReactJS. The app
+          contains a <b>Planarity Testing</b> algorithm that finds a planar embedding
+          for a graph or shows the K5 / K3,3 minor. Features include creating
+          custom graphs with directed / weighted edges, algorithms, tools,
+          default graphs and more to come.
+        </p>
+        <Stack stack={['JavaScript', 'ReactJS', 'NodeJS', 'C++']} />
+        <p><b>Take a look:</b></p>
+        <a href={'http://www.graphtoolbox.com/'}> www.graphtoolbox.com</a>
+      </div>
     )
   },
   {
@@ -133,13 +156,17 @@ let cards = [
     'type' : 'project',
     'date' : 'Summer 2015',
     'data' : (
-      <p>
-        <b>Description:</b> Created an Android arcade game where a blob
+      <div>
+        <p><b>Description:</b> Created an Android arcade game where a blob
         named Beugo has to bounce over and under obstacles while
         chasing a ghost. Features include soft body physics replication,
         random level generation, settings, OpenGL vector graphics,
-        interactive tutorial, multiple difficulties and more.
-      </p>
+        interactive tutorial, multiple difficulties and more.</p>
+        <Stack stack={['Java', 'Android', 'OpenGL']} />
+        <p><b>Take a look:</b></p>
+        <a href={'https://play.google.com/store/apps/details?id=beugo.android&hl=en'}>
+          play.google.com/beugo</a>
+      </div>
     )
   },
   {
@@ -173,6 +200,25 @@ let cards = [
     'type' : 'school',
     'date' : 'Winter 2015',
     'data' : (<Term courses={COURSES['2B']} />)
+  },
+  {
+    'title1' : 'WLP4 Compiler',
+    'title2' : 'Compiles a subset of the C++ language.',
+    'icon' : 'terminal.png',
+    'type' : 'project',
+    'date' : 'Winter 2015',
+    'data' : (
+      <div>
+        <p>
+          <b>Description:</b> Built a compiler from scratch for the language WLP4 as part of a school
+          course on compilers. WLP4 is a subset of c++ including memory allocation,
+          functions, scopes, loops, and variables. The project included
+          tokenizing code, assembling MIPS to byte code, parse tree construction, and MIPS
+          code generation.
+        </p>
+        <Stack stack={['C++', 'Bash', 'MIPS']} />
+      </div>
+    )
   },
   {
     'title1' : 'Technologies',
