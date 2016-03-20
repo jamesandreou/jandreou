@@ -1,6 +1,6 @@
 import React from 'react';
 import { render } from 'react-dom';
-import { Jandreou } from './jandreou';
+import { CardHolder } from './cardHolder.js';
 import style from './style.css';
 
-render(<Jandreou />, document.getElementById('root'));
+render(<CardHolder />, document.getElementById('root'));

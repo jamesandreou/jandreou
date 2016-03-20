@@ -19,6 +19,10 @@ export class CardHolder extends Component{
     };
 	}
 
+  componentDidMount(){
+        window.addEventListener("resize", this.resize.bind(this));
+  }
+
 	render(){
     // Create columns/card components
     const cards = this.createCardDOMLayout();
@@ -89,6 +93,13 @@ export class CardHolder extends Component{
     this.setState({
       filter : type,
       cols : this.assignCardsToCols(window.innerWidth, type)
+    });
+  }
+
+  resize(){
+    const f = this.state.filter;
+    this.setState({
+      cols : this.assignCardsToCols(window.innerWidth, f)
     });
   }
 
