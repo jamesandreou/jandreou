@@ -2,12 +2,14 @@ import React, { Component } from 'react';
 import { Grid } from 'react-bootstrap';
 import { Col } from 'react-bootstrap';
 import { Row } from 'react-bootstrap';
+import { Glyphicon } from 'react-bootstrap';
 
 export class Card extends Component{
 
 	constructor(){
 		super();
 	}
+
 
 	render(){
 		const d = this.props.data;
@@ -32,11 +34,16 @@ export class Card extends Component{
 	}
 
 	createBanner(type, date){
-		const src = require('./assets/' + type + '.png');
+		const glyph = {
+			'skill' : 'user',
+			'school' : 'education',
+			'work' : 'briefcase',
+			'project' : 'folder-open'
+		};
 		return(
 			<Row className='line'>
 				<Col xs={3}>
-					<img src={src} />
+					<Glyphicon glyph={glyph[type]} />
 				</Col>
 				<Col xs={9}>
 					<div className={'date'}>{date}</div>
