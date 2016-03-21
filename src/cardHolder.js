@@ -14,8 +14,8 @@ export class CardHolder extends Component{
 		super();
     this.cards = Cards;
     this.state = {
-      cols : this.assignCardsToCols(window.innerWidth, 'all'),
-      filter : 'all'
+      cols : this.assignCardsToCols(window.innerWidth, 'skill'),
+      filter : 'skill'
     };
 	}
 
@@ -30,13 +30,12 @@ export class CardHolder extends Component{
 		return (
       <Grid fluid={true}>
         <Row className='filterContainer'>
-          <Col xs={3} md={1}></Col>
-          <Col xs={6} md={2}><Filter parent={this} name={'All'} type={'all'} glyph={''}/></Col>
+          <Col xs={0} md={2}></Col>
           <Col xs={6} md={2}><Filter parent={this} name={'About'} type={'skill'} glyph={''}/></Col>
           <Col xs={6} md={2}><Filter parent={this} name={'Experience'} type={'work'} glyph={''}/></Col>
           <Col xs={6} md={2}><Filter parent={this} name={'Education'} type={'school'} glyph={''}/></Col>
           <Col xs={6} md={2}><Filter parent={this} name={'Projects'} type={'project'} glyph={''}/></Col>
-          <Col xs={3} md={1}></Col>
+          <Col xs={0} md={2}></Col>
         </Row>
         <Row className={"cardHolder"}>
           {cards}
@@ -72,7 +71,6 @@ export class CardHolder extends Component{
     }
     // Filter cards
     let filteredCards = this.cards.filter(function(c){
-      if(type === 'all') return true;
       return c.type === type;
     });
     // Greedy assign cards, use 1 since we don't know heights yet
