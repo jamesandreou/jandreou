@@ -63,7 +63,7 @@ const SKILLS = {
     ['JQuery', 1],
     ['Boost', 0.4],
     ['NodeJS', 1],
-    ['Saas', 0.8],
+    ['Bootstrap', 0.8],
     ['OpenSSL', 0.6]
   ],
   'languages' : [
