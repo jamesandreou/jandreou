@@ -55,6 +55,7 @@ const SKILLS = {
     ['Linux', 0.8],
     ['Unix', 0.9],
     ['SQL', 0.6],
+    ['MongoDB', 0.8],
     ['GIT', 1],
     ['OpenGL', 0.8]
   ],
@@ -63,7 +64,7 @@ const SKILLS = {
     ['JQuery', 1],
     ['Boost', 0.4],
     ['NodeJS', 1],
-    ['Bootstrap', 0.8],
+    ['Sass', 0.8],
     ['OpenSSL', 0.6]
   ],
   'languages' : [
@@ -80,7 +81,7 @@ let cards = [
   {
     'title1' : 'James Andreou',
     'title2' : 'Software Engineer',
-    'icon' : 'me.png',
+    'icon' : 'me.jpg',
     'type' : 'skill',
     'date' : '',
     'data' : (
@@ -88,8 +89,16 @@ let cards = [
         <p>
           I am a Software Engineer and Computer Science student at University of Waterloo.
            I have a passion for using modern technologies to create scalable,
-           efficient user interfaces and backend solutions.
+           effecient, and elegant web applications.
         </p>
+        <b>Areas of Computer Science I enjoy:</b>
+        <ul>
+          <li>Web</li>
+          <li>Algorithms</li>
+          <li>Operating Systems</li>
+          <li>Security</li>
+          <li>Compilers</li>
+        </ul>
         <span>
           <Glyphicon glyph='share-alt' />
           <b>{' Email: '}</b>
@@ -98,7 +107,12 @@ let cards = [
         <span>
           <Glyphicon glyph='share-alt' />
           <b>{' GitHub: '}</b>
-          <a href={'https://www.github.com/jamesandreou'}>www.github.com/jamesandreou</a>
+          <a href={'https://www.github.com/jamesandreou'}>github.com/jamesandreou</a>
+        </span>
+        <span>
+          <Glyphicon glyph='share-alt' />
+          <b>{' Resume: '}</b>
+          <a href={'/resume'}>View Resume</a>
         </span>
       </div>
     )
@@ -120,8 +134,23 @@ let cards = [
     )
   },
   {
+    'title1' : 'University of Waterloo',
+    'title2' : 'Honours Computer Science',
+    'icon' : 'uw.png',
+    'type' : 'school',
+    'date' : 'Fall 2013 - Winter 2017',
+    'data' : (
+      <div>
+        <p>Candidate for:
+        <b>Honours Computer Science</b>
+        Software Engineering Option, Combinatorics and Optimization Minor</p>
+        <b>(6/8) Terms Completed</b>
+      </div>
+    )
+  },
+  {
     'title1' : 'Term 3B',
-    'title2' : 'University of Waterloo, Honours Computer Science',
+    'title2' : 'University of Waterloo',
     'icon' : 'uw.png',
     'type' : 'school',
     'date' : 'Winter 2016',
@@ -138,7 +167,7 @@ let cards = [
         <p>
           <b>Description:</b> Created a web app to graphically create,
           manipulate and run algorithms on graphs with ReactJS. The app
-          contains a <b>Planarity Testing</b> algorithm that finds a planar embedding
+          contains a Planarity Testing algorithm that finds a planar embedding
           for a graph or shows the K5 / K3,3 minor. Features include creating
           custom graphs with directed / weighted edges, algorithms, tools,
           default graphs and more to come.
@@ -179,7 +208,7 @@ let cards = [
   },
   {
     'title1' : 'Term 3A',
-    'title2' : 'University of Waterloo, Computer Science',
+    'title2' : 'University of Waterloo',
     'icon' : 'uw.png',
     'type' : 'school',
     'date' : 'Fall 2015',
@@ -195,7 +224,7 @@ let cards = [
   },
   {
     'title1' : 'Term 2B',
-    'title2' : 'University of Waterloo, Computer Science',
+    'title2' : 'University of Waterloo',
     'icon' : 'uw.png',
     'type' : 'school',
     'date' : 'Winter 2015',
@@ -230,7 +259,7 @@ let cards = [
   },
   {
     'title1' : 'Term 2A',
-    'title2' : 'University of Waterloo, Computer Science',
+    'title2' : 'University of Waterloo',
     'icon' : 'uw.png',
     'type' : 'school',
     'date' : 'Fall 2014',
@@ -238,7 +267,7 @@ let cards = [
   },
   {
     'title1' : 'Term 1B',
-    'title2' : 'University of Waterloo, Computer Science',
+    'title2' : 'University of Waterloo',
     'icon' : 'uw.png',
     'type' : 'school',
     'date' : 'Winter 2014',
@@ -246,7 +275,7 @@ let cards = [
   },
   {
     'title1' : 'Term 1A',
-    'title2' : 'University of Waterloo, Computer Science',
+    'title2' : 'University of Waterloo',
     'icon' : 'uw.png',
     'type' : 'school',
     'date' : 'Fall 2013',

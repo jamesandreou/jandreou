@@ -53,7 +53,8 @@ export class Card extends Component{
 	}
 
 	createHeader(icon, title1, title2){
-		const src = require('./assets/' + icon);
+		const srcURL = require('./assets/' + icon);
+		const img = (<img src={srcURL} />);
 		return(
 			<Row>
 				<Col xs={8}>
@@ -61,7 +62,7 @@ export class Card extends Component{
 					<h4>{title2}</h4>
 				</Col>
 				<Col xs={4}>
-					<img src={src} />
+					{img}
 				</Col>
 			</Row>
 		);

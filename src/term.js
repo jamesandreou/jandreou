@@ -9,6 +9,7 @@ export class Term extends Component{
 	render(){
 		return (
 			<div>
+				<b>Courses:</b>
         <ul style={{listStyleType : 'disc'}}>
           {this.props.courses.map(function(c, i){
 						return (
@@ -16,8 +17,6 @@ export class Term extends Component{
 						);
 					}, this)}
         </ul>
-				<b> BCS, Software Engineering Option,
-        Combinatorics and Optimization Minor </b>
       </div>
 		);
 	}
