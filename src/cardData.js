@@ -51,21 +51,19 @@ const COURSES = {
 
 const SKILLS = {
   'tech' : [
-    ['Android', 1],
+    ['Android', 0.6],
     ['Linux', 0.8],
     ['Unix', 0.9],
     ['SQL', 0.6],
-    ['MongoDB', 0.8],
+    ['Web Browsers', 1],
     ['GIT', 1],
     ['OpenGL', 0.8]
   ],
   'frameworks' : [
     ['ReactJS', 1],
-    ['JQuery', 1],
+    ['JQuery', 0.9],
     ['Boost', 0.4],
-    ['NodeJS', 1],
-    ['Sass', 0.8],
-    ['OpenSSL', 0.6]
+    ['NodeJS', 1]
   ],
   'languages' : [
     ['JavaScript', 1],
@@ -81,7 +79,7 @@ let cards = [
   {
     'title1' : 'James Andreou',
     'title2' : 'Software Engineer',
-    'icon' : 'me.jpg',
+    'icon' : 'profile.jpg',
     'type' : 'skill',
     'date' : '',
     'data' : (
@@ -89,7 +87,7 @@ let cards = [
         <p>
           I am a Software Engineer and Computer Science student at University of Waterloo.
            I have a passion for using modern technologies to create scalable,
-           effecient, and elegant web applications.
+           performance sensitive, and elegantly designed software.
         </p>
         <b>Areas of Computer Science I enjoy:</b>
         <ul>
@@ -125,11 +123,42 @@ let cards = [
     'date' : 'Summer 2016',
     'data' : (
       <div>
-        <p>This Summer I will be interning at Mozilla on the DOM team. The Firefox
-        DOM implementation and JavaScript browser API are some of the responsibilities
-        of the DOM team. I will update this block after completing the internship with more
-        details!</p>
-        <Stack stack={['C++', 'JavaScript', 'Python', 'Rust']} />
+        <p>During Summer 2016 I interned at Mozilla on the DOM team. I got the chance to work on two very interesting projects on the
+         Gecko web engine.
+         <br/><b>Private Browsing in Web Origins</b><br/>
+         <br/>My first project was integrating private browsing into the Web Origin security model. The model ensures that
+         content on a web page can only interact with other content that comes from the same "origin". An origin is described by the
+         URL, port, and network protocal it originates from. For example a Facebook like button should not be able to read a 
+         username or password field on the same webpage.
+         <br/>However, two identical port/URL/schemes in a private tab
+         and non-private tab should not be equivilant. My task was to extend that origin definition to include another axis dictating
+         whether or not the origin was from a private session.
+         <br/><b>DOM Node Children Data Structure Overhaul</b><br/>
+         <br/>
+         My second project was rewriting the DOM node children data structure. Originally Gecko stored DOM node children in a memory
+         shifting array. This was a problem because whenever a new DOM node was inserted or removed the CPU spent a ton of time executing
+         the memmove() calls. I rewrote the data structure as a linked list to better suit insertion and removal operations.
+         However, naturally with a linkedlist, indexing the children became extremely slow.<br/>To resolve this issue I implemented a cache that
+         only cached the DOM node that was previously indexed. The strategy for indexing was now to lookup the cached node and iterate to the
+         node being indexed from there. This results in iterating sequentially being O(1) instead of O(n) which is great because 99.9% of
+         websites will iterate on a child node list and not randomly access children by indices. I then performed micro optimizaitons to
+         reduce memory requirements on DOM nodes and speed up DOM node operations on benchmarks. The end result of the new data structure was
+         insertion and removal operations performing 200%-600%!</p>
+        <Stack stack={['C++', 'JavaScript']} />
+      </div>
+    )
+  },
+    {
+    'title1' : 'Google',
+    'title2' : 'Software Engineering Intern',
+    'icon' : 'google.png',
+    'type' : 'work',
+    'date' : 'Fall 2016',
+    'data' : (
+      <div>
+        <p>During Fall 2016 I am interning at Google on the Adwords team. My project involes integrating natural language
+         processing with Adwords Reporting. I will update this after completing the internship with details!</p>
+        <Stack stack={['Java', 'JavaScript']} />
       </div>
     )
   },
