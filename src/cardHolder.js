@@ -60,7 +60,7 @@ export class CardHolder extends Component{
 
   assignCardsToCols(w, type){
     // Calculate number of columns
-    const breakPoints = [0, 600, 900, 1200, 1600];
+    const breakPoints = [0, 600, 900, 1200];
     const nCols = breakPoints.reduce(function(a, b, i, arr) {
       return (w > b) ? i : a;
     }) + 1;
