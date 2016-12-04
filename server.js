@@ -26,16 +26,6 @@ app.get('/', function(req, res) {
   res.sendFile(path.join(__dirname, 'index.html'));
 });
 
-
-app.get('/resume', function(request, response){
-  var pdfPath = path.join(__dirname, './resume.pdf');
-  fs.readFile(pdfPath, function (err,data){
-     response.contentType("application/pdf");
-     response.send(data);
-  });
-});
-
-
 app.listen(app.get('port'), function(err) {
   if (err) {
     console.log(err);
