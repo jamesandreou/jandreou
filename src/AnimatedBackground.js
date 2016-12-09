@@ -5,7 +5,7 @@ export class AnimatedBackground extends Component {
   constructor(){
     super();
     // Constants
-    this.colors = ['#68D0ED', '#D3F4E3', '#FF7452']
+    this.colors = ['#004C79', '#005F97', '#3C8AB8', '#E8F4FA', '#849FBB']
     this.numEntities = 20
     this.height = 480
     // Entities to render
@@ -39,7 +39,7 @@ export class AnimatedBackground extends Component {
         Math.random() * 100,
         Math.random() * 100,
         Math.random() * 2 + 1,
-        i % 3
+        i % this.colors.length
       ))
     }
     return entities
@@ -68,7 +68,7 @@ export class AnimatedBackground extends Component {
         newR = Math.random() * 2 + 1
       }
       if (canChangeColor) {
-        newC = Math.floor(Math.random() * 3)
+        newC = Math.floor(Math.random() * this.colors.length)
       }
 
       entities.push(new Entity(newX, newY, newR, newC))
