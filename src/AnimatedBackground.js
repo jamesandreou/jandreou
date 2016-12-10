@@ -8,7 +8,7 @@ export class AnimatedBackground extends Component {
     this.colors = ['#B05F6D', '#EB6B56', '#FFC153', '#47B39D']
     //this.colors = ['#004C79', '#005F97', '#3C8AB8', '#E8F4FA', '#849FBB']
     this.numEntities = 20
-    this.height = 580
+    this.height = 480
     // Entities to render
     this.state = {
       entities : this.initalEntities()
@@ -62,8 +62,8 @@ export class AnimatedBackground extends Component {
         let dx = Math.random() * 30 - 15
         let dy = Math.random() * 30 - 15
         // Only add deltas if bounds are still satisfied.
-        newX += (e.x + dx < 99 && e.x + dx > 1) ? dx : 0
-        newY += (e.y + dy < 99 && e.y + dy > 1) ? dy : 0
+        newX += (e.x + dx < 97 && e.x + dx > 3) ? dx : 0
+        newY += (e.y + dy < 97 && e.y + dy > 3) ? dy : 0
       }
       if (canGrow) {
         newR = Math.random() * 2 + 1
