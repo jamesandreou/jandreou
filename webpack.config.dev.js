@@ -23,6 +23,11 @@ module.exports = {
       loaders: ["style-loader", "css-loader", "sass-loader"]
     },
     {
+      test: /\.css$/,
+      loader: 'style!css?modules',
+      include: /flexboxgrid/,
+    },
+    {
       test: /\.js$/,
       loaders: ['babel'],
       include: path.join(__dirname, 'src')
