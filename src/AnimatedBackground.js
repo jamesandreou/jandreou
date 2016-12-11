@@ -5,10 +5,9 @@ export class AnimatedBackground extends Component {
   constructor(){
     super();
     // Constants
-    this.colors = ['#B05F6D', '#EB6B56', '#FFC153', '#47B39D']
-    //this.colors = ['#004C79', '#005F97', '#3C8AB8', '#E8F4FA', '#849FBB']
+    this.colors = ['#FFFFF7', '#73B1D6', '#4589B0', '#1D628B']
     this.numEntities = 40
-    this.height = 800
+    this.height = 600
     // Entities to render
     this.state = {
       entities : this.initalEntities()
@@ -24,7 +23,7 @@ export class AnimatedBackground extends Component {
     const rFactor = Math.min(xFactor, yFactor) * 2 / 3
     return(
       <svg className='entity-container' viewBox={'0 0 ' + w.toString() + ' ' + w.toString()} preserveAspectRatio='xMidYMid meet'>
-        <rect x="0" y="0" width={w} height={this.height} style={{fill : '#462446'}}/>
+        <rect x="0" y="0" width={w} height={this.height} style={{fill : '#444444'}}/>
         {this.state.entities.map((e, i) => (
           <circle key={i} cx={e.x * xFactor} cy={e.y * yFactor} r={e.r * rFactor}
                   className="entity-vertice" style={{fill : this.colors[e.c]}}/>
