@@ -7,7 +7,7 @@ export class AnimatedBackground extends Component {
     // Constants
     this.colors = ['#FFFFF7', '#73B1D6', '#4589B0', '#1D628B']
     this.numEntities = 40
-    this.height = 600
+    this.height = 660
     // Entities to render
     this.state = {
       entities : this.initalEntities()
