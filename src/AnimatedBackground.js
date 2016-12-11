@@ -7,8 +7,8 @@ export class AnimatedBackground extends Component {
     // Constants
     this.colors = ['#B05F6D', '#EB6B56', '#FFC153', '#47B39D']
     //this.colors = ['#004C79', '#005F97', '#3C8AB8', '#E8F4FA', '#849FBB']
-    this.numEntities = 20
-    this.height = 480
+    this.numEntities = 40
+    this.height = 800
     // Entities to render
     this.state = {
       entities : this.initalEntities()
@@ -21,7 +21,7 @@ export class AnimatedBackground extends Component {
     const w = window.innerWidth
     const xFactor = window.innerWidth / 100
     const yFactor = this.height / 100
-    const rFactor = Math.min(xFactor, yFactor)
+    const rFactor = Math.min(xFactor, yFactor) * 2 / 3
     return(
       <svg className='entity-container' viewBox={'0 0 ' + w.toString() + ' ' + w.toString()} preserveAspectRatio='xMidYMid meet'>
         <rect x="0" y="0" width={w} height={this.height} style={{fill : '#462446'}}/>

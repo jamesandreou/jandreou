@@ -14,7 +14,9 @@ const app = (
   <Grid>
     <NavTabs />
     <BioCard />
-    <Divider label='Timeline'/>
+    <Divider label='Experience'/>
+    <Divider label='Education'/>
+    <Divider label='Projects'/>
   </Grid>
 )
 
