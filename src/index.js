@@ -22,8 +22,8 @@ const app = (
       <BioCard />
       <Divider label='Experience'/>
       <Row>
-      <ExperienceCard data={CardData.experienceCards[0]} />
-      <ExperienceCard data={CardData.experienceCards[1]} />
+        <ExperienceCard data={CardData.experienceCards[0]} />
+        <ExperienceCard data={CardData.experienceCards[1]} />
       </Row>
       <Divider label='Education'/>
       <Divider label='Projects'/>
