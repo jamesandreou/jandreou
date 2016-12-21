@@ -1,0 +1,287 @@
+/* Color Scheme darkest -> lightest (update in AnimatedBackground.js and NavTabs.js if changed) */
+$COL1: #444444;
+$COL2: #1D628B;
+$COL3: #4589B0;
+$COL4: #73B1D6;
+$COL5: #FFFFF7;
+
+$FONT: #111;
+$BG: #EFEFEF;
+
+*{
+  font-family: 'Neuton', serif;
+  margin: 0;
+  padding: 0;
+  color: $FONT;
+}
+
+body {
+  background: $BG;
+}
+
+/* Animated SVG background */
+
+.entity-container {
+  width: 100vw;
+  height: 100vw;
+  position: absolute;
+  top: 0;
+  z-index: -1;
+}
+
+.entity-vertice {
+  transition: 1s ease-in-out;
+}
+
+/* Sticky tab navigation */
+
+.tab-container {
+  width: 100vw;
+  margin: 0;
+  text-align: center;
+  z-index: 9999;
+}
+
+.tab-wrapper {
+  display: inline-block;
+  padding: 16px;
+  &:hover {
+    cursor: pointer;
+  }
+  .tab-label {
+    font-family: 'Montserrat', sans-serif;
+    color: $COL4;
+    font-size: 16px;
+    @media screen and (max-width: 48em) {
+      font-size: 12px;
+    }
+  }
+  .tab-selector {
+    margin-top: 2px;
+    width: 100%;
+    height: 3px;
+    background: $COL5;
+    transition: 0.2s;
+  }
+}
+
+/* Bio */
+
+.bio-container {
+  padding: 32px;
+  background: #fff;
+  width: 80%;
+  margin-left: 10%;
+  margin-right: 10%;
+  @media screen and (max-width: 48em) {
+    width: 100%;
+    margin-left: 0;
+    margin-right: 0;
+  }
+  box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+}
+
+.bio-info {
+  @media screen and (max-width: 48em) {
+    margin-top: 16px;
+  }
+  h1 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
+  }
+  h3 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: normal;
+  }
+  .links {
+    margin-top: 16px;
+    * {
+      display: inline-block;
+    }
+    img {
+      vertical-align: middle;
+      margin-right: 8px;
+    }
+    font-weight: bold;
+  }
+}
+
+.bio-profile {
+  text-align: center;
+}
+
+/* Timeline */
+
+.timeline-header {
+  text-align: center;
+  font-family: 'Montserrat', sans-serif;
+  margin-bottom: 24px;
+  margin-top: 24px;
+}
+
+.timeline-line {
+  height: 100%;
+  background: $COL3;
+  width: 4px;
+  margin: 0 auto 0 auto;
+  position: relative;
+}
+
+.timeline-line-pointer {
+  position: absolute;
+  top: -4px;
+  left: -6px;
+  width: 0;
+  height: 0;
+  border-left: 8px solid transparent;
+  border-right: 8px solid transparent;
+  border-bottom: 16px solid $COL3;
+}
+
+.timeline-content {
+  padding: 16px;
+  text-align: center;
+  width: auto;
+  .place {
+    img {
+      vertical-align: middle;
+      margin-right: 8px;
+    }
+    * {
+      display: inline-block;
+    }
+    @media screen and (max-width: 48em) {
+      font-size: 20px;
+    }
+    font-size: 25px;
+    font-weight: bold;
+  }
+  .role {
+    margin-top: 2px;
+  }
+  .date {
+    color: $COL3;
+    font-weight: bold;
+    margin-top: 8px;
+    text-align: center;
+  }
+}
+
+.timeline-start {
+  color: $COL3;
+  font-weight: bold;
+  text-align: center;
+}
+
+.timeline-card {
+  background: #fff;
+  margin: 0 12px 16px 12px;
+  border: 2px solid $COL3;
+  &:hover {
+    cursor: pointer;
+    background: $COL4;
+  }
+}
+
+/* Cards */
+
+.card-container {
+  padding: 20px;
+}
+
+.card {
+  padding: 16px;
+  border-top: 8px solid $COL2;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+  background: $COL5;
+  .header {
+    img {
+      vertical-align: middle;
+      float: right;
+    }
+    * {
+      display: inline-block;
+    }
+  }
+  p {
+    padding-bottom: 20px;
+  }
+  .date {
+    text-align: right;
+    color: $COL3;
+  }
+}
+
+.card-divider {
+  margin: 24px 0 24px 0;
+  width: 60%;
+  background: $COL4;
+  height: 4px;
+  border-radius: 4px;
+}
+
+.experience-wrapper, .project-wrapper {
+  span {
+    * {
+      display: inline-block;
+    }
+    .tech {
+      padding: 8px;
+      margin-right: 8px;
+      background: $COL1;
+      color: $COL5;
+      border-radius: 4px;
+    }
+  }
+}
+
+.education-wrapper {
+  ul {
+    margin-left: 32px;
+    .course {
+      font-weight: bold;
+    }
+  }
+}
+
+/* Common Utils */
+
+// Links
+a {
+  text-decoration: none;
+  outline: none;
+  color: $COL3;
+  &:hover {
+    color: $COL4;
+    cursor: pointer;
+  }
+}
+
+// Labels
+.label {
+  color: $COL1;
+  font-family: 'Montserrat', sans-serif; 
+  font-weight: bold;
+  margin-bottom: 16px;
+}
+
+.divider {
+  margin: 64px 0px 32px 0px;
+  text-align: center;
+  font-family: 'Montserrat', sans-serif; 
+  font-weight: bold;
+  font-size: 32px;
+  color: $COL1;
+}
+
+.line {
+  width: 100%;
+  height: 1px;
+  background: $COL1;
+  margin-top: 16px;
+  margin-bottom: 16px;
+}
+
+.col2 {
+  color: $COL2;
+}
