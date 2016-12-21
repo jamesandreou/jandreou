@@ -6,6 +6,7 @@ import { BioCard } from './BioCard.js'
 import { Divider } from './Divider.js'
 import { ExperienceCard } from './ExperienceCard.js'
 import { EducationCard } from './EducationCard.js'
+import { ProjectCard } from './ProjectCard.js'
 import * as CardData from './CardData'
 import { Grid, Row } from 'react-flexbox-grid/lib/index'
 import { StickyContainer, Sticky } from 'react-sticky';
@@ -36,6 +37,12 @@ const app = (
         ))}
       </Row>
       <Divider label='Projects'/>
+      <h2 className='label'>Spare Time Apps</h2>
+      <Row>
+        {CardData.projectCards.map((card, i) => (
+          <ProjectCard key={i} data={card} />
+        ))}
+      </Row>
     </Grid>
   </StickyContainer>
 )
