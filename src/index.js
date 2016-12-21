@@ -1,16 +1,10 @@
 import React from 'react'
 import { render } from 'react-dom'
-import { AnimatedBackground } from './AnimatedBackground.js'
+import { StickyContainer, Sticky } from 'react-sticky'
 import { NavTabs } from './NavTabs.js'
-import { BioCard } from './BioCard.js'
-import { Divider } from './Divider.js'
-import { ExperienceCard } from './ExperienceCard.js'
-import { EducationCard } from './EducationCard.js'
-import { ProjectCard } from './ProjectCard.js'
-import * as CardData from './CardData'
-import { Grid, Row } from 'react-flexbox-grid/lib/index'
-import { StickyContainer, Sticky } from 'react-sticky';
-import injectTapEventPlugin from 'react-tap-event-plugin';
+import { AnimatedBackground } from './AnimatedBackground.js'
+import { PortfolioContent } from './PortfolioContent.js'
+import injectTapEventPlugin from 'react-tap-event-plugin'
 import style from './style.scss'
 
 injectTapEventPlugin();
@@ -20,30 +14,7 @@ const app = (
     <Sticky>
       <NavTabs />
     </Sticky>
-    <Grid>
-      <BioCard />
-      <Divider label='Experience'/>
-      <h2 className='label'>Internships</h2>
-      <Row>
-        <ExperienceCard data={CardData.experienceCards[0]} />
-        <ExperienceCard data={CardData.experienceCards[1]} />
-      </Row>
-      <Divider label='Education'/>
-      <h2 className='label'>Unviersity of Waterloo</h2>
-      <h3 className='label col2'>Computer Science, Business Option, Combinatorics and Optimization Minor</h3>
-      <Row>
-        {CardData.educationCards.reverse().map((card, i) => (
-          <EducationCard key={i} data={card} />
-        ))}
-      </Row>
-      <Divider label='Projects'/>
-      <h2 className='label'>Spare Time Apps</h2>
-      <Row>
-        {CardData.projectCards.map((card, i) => (
-          <ProjectCard key={i} data={card} />
-        ))}
-      </Row>
-    </Grid>
+    <PortfolioContent />
   </StickyContainer>
 )
 
