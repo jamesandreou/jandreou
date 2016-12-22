@@ -62,6 +62,7 @@ class Tab extends Component {
   }
 
   render() {
+    console.log(this.state.hover)
     const activeOrHover = this.state.hover || this.props.active
     const labelStyle = {
       color : activeOrHover ? '#FFFFF7' : '#73B1D6'

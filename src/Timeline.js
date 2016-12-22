@@ -39,19 +39,15 @@ export class Timeline extends Component {
     return(
       <Row>
         <Col xs={12}><h2 className='timeline-header'>What I've been up to...</h2></Col>
-        <Col xs={0} md={2}>
-        </Col>
-        <Col xs={12} md={4}>
+        <Col xs={12} md={6}>
           {this.eventsLeft.map((e, i) => (
             <TimelineCard key={i} icon={e.icon} place={e.place} role={e.role} date={e.date}/>
           ))}
         </Col>
-        <Col xs={12} md={4}>
+        <Col xs={12} md={6}>
           {this.eventsRight.map((e, i) => (
             <TimelineCard key={i} icon={e.icon} place={e.place} role={e.role} date={e.date}/>
           ))}
-        </Col>
-        <Col xs={0} md={2}>
         </Col>
       </Row>
     );

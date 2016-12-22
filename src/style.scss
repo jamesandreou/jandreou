@@ -8,6 +8,8 @@ $COL5: #FFFFF7;
 $FONT: #111;
 $BG: #EFEFEF;
 
+$MOBILE_WIDTH: 1024px;
+
 *{
   font-family: 'Neuton', serif;
   margin: 0;
@@ -52,7 +54,7 @@ body {
     font-family: 'Montserrat', sans-serif;
     color: $COL4;
     font-size: 16px;
-    @media screen and (max-width: 48em) {
+    @media screen and (max-width: $MOBILE_WIDTH) {
       font-size: 12px;
     }
   }
@@ -73,7 +75,7 @@ body {
   width: 80%;
   margin-left: 10%;
   margin-right: 10%;
-  @media screen and (max-width: 48em) {
+  @media screen and (max-width: $MOBILE_WIDTH) {
     width: 100%;
     margin-left: 0;
     margin-right: 0;
@@ -82,7 +84,7 @@ body {
 }
 
 .bio-info {
-  @media screen and (max-width: 48em) {
+  @media screen and (max-width: $MOBILE_WIDTH) {
     margin-top: 16px;
   }
   h1 {
@@ -150,7 +152,7 @@ body {
     * {
       display: inline-block;
     }
-    @media screen and (max-width: 48em) {
+    @media screen and (max-width: $MOBILE_WIDTH) {
       font-size: 20px;
     }
     font-size: 25px;
@@ -237,6 +239,21 @@ body {
     .course {
       font-weight: bold;
     }
+  }
+}
+
+.footer {
+  width: 100vw;
+  margin: 0px;
+  padding: 20px;
+  background: $COL2;
+  * {
+    font-weight: normal;
+    color: #fff;
+  }
+  .copy {
+    width: 100%;
+    text-align: right;
   }
 }
 

@@ -50,7 +50,7 @@ export class BioCard extends Component {
          <Timeline />
         </Col>
       </Row>
-    );
+    )
   }
 
 }
