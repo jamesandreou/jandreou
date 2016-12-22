@@ -43,6 +43,7 @@ export class PortfolioContent extends Component {
             <ProjectCard key={i} data={card} />
           ))}
         </Row>
+        <br />
         <h2 className='label'>Resume: <a href='/resume'>Download Here</a></h2>
       </Grid>
     )

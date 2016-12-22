@@ -247,6 +247,7 @@ body {
 .footer {
   width: 100vw;
   margin: 0px;
+  margin-top: 32px;
   padding: 20px;
   background: $COL2;
   * {
@@ -277,6 +278,7 @@ a {
   color: $COL1;
   font-family: 'Montserrat', sans-serif; 
   font-weight: bold;
+  padding-left: 16px;
   margin-bottom: 16px;
 }
 
