@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import { findDOMNode } from 'react-dom'
 import { Col } from 'react-flexbox-grid/lib/index'
 import { Row } from 'react-flexbox-grid/lib/index'
 
@@ -11,8 +12,10 @@ export class Divider extends Component {
   render() {
     return(
       <Row>
-        <Col xs={12} className='divider'>
-          {this.props.label}
+        <Col xs={12}>
+          <div className='divider' id={'divider-'+this.props.id}>
+            {this.props.label}
+          </div>
         </Col>
       </Row>
     );

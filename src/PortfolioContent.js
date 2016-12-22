@@ -13,18 +13,22 @@ export class PortfolioContent extends Component {
     super()
   }
 
+  componentDidMount() {
+
+  }
+
   render() {
     return (
       <Grid>
         <BioCard />
-        <Divider label='Experience'/>
+        <Divider label='Experience' id='1' />
         <h2 className='label'>Internships</h2>
         <Row>
           {CardData.experienceCards.map((card, i) => (
             <ExperienceCard key={i} data={card} />
           ))}
         </Row>
-        <Divider label='Education'/>
+        <Divider label='Education' id='2' />
         <h2 className='label'>Unviersity of Waterloo</h2>
         <h3 className='label col2'>Computer Science, Business Option, Combinatorics and Optimization Minor</h3>
         <Row>
@@ -32,7 +36,7 @@ export class PortfolioContent extends Component {
             <EducationCard key={i} data={card} />
           ))}
         </Row>
-        <Divider label='Projects'/>
+        <Divider label='Projects' id='3' />
         <h2 className='label'>Spare Time Apps</h2>
         <Row>
           {CardData.projectCards.map((card, i) => (

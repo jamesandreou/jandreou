@@ -6,7 +6,6 @@ export class NavTabs extends Component {
   constructor() {
     super();
     this.tabs = ['ABOUT', 'EXPERIENCE', 'EDUCATION', 'PROJECTS']
-    this.breakPoints = [0, 745]
     this.state = {
       activeIndex : 0,
       transperant: true
@@ -14,19 +13,16 @@ export class NavTabs extends Component {
   }
 
   componentDidMount() {
-    window.addEventListener('scroll', this.handleScroll.bind(this)); 
+    window.addEventListener('scroll', this.handleScroll.bind(this))
   }
 
   componentWillUnmount() {
-    window.removeEventListener('scroll', this.handleScroll.bind(this));
+    window.removeEventListener('scroll', this.handleScroll.bind(this))
   }
 
   handleScroll() {
-    const newActiveIndex = this.breakPoints.reduce((a, b, i) => (
-      window.scrollY > b ? i : a
-    ), 0)
     this.setState({
-      activeIndex: newActiveIndex, 
+      activeIndex: this.props.activeSectionCallback(), 
       transperant : (window.scrollY <= 10)
     })
   }
@@ -38,7 +34,9 @@ export class NavTabs extends Component {
     return(
       <Row className='tab-container' style={style} center='xs'>
         {this.tabs.map((tab, i) => (
-          <Tab active={i===this.state.activeIndex} key={i} label={tab} />
+          <Tab active={i===this.state.activeIndex} key={i} label={tab} 
+               handleClick={this.props.handleClick(i)}
+          />
         ))}
       </Row>
     )
@@ -76,7 +74,8 @@ class Tab extends Component {
       <Col xs={6} md={3}>
         <div className='tab-wrapper'
           onMouseEnter={this.mouseEnter.bind(this)}
-          onMouseLeave={this.mouseLeave.bind(this)}>
+          onMouseLeave={this.mouseLeave.bind(this)}
+          onClick={this.props.handleClick}>
           <div className='tab-label' style={labelStyle}>
             {this.props.label}
           </div>

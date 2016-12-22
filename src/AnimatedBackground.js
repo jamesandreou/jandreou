@@ -52,7 +52,7 @@ export class AnimatedBackground extends Component {
       // Probability distribution of transforms.
       const canMove = Math.random() > 2 / 3
       const canGrow = Math.random() > 2 / 3
-      const canChangeColor = Math.random() > 2 /3
+      const canChangeColor = Math.random() > 2 / 3
 
       // Apply transforms if possible.
       let newX = e.x, newY = e.y, newR = e.r, newC = e.c;
