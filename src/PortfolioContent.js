@@ -13,10 +13,6 @@ export class PortfolioContent extends Component {
     super()
   }
 
-  componentDidMount() {
-
-  }
-
   render() {
     return (
       <Grid>
@@ -29,7 +25,7 @@ export class PortfolioContent extends Component {
           ))}
         </Row>
         <Divider label='Education' id='2' />
-        <h2 className='label'>Unviersity of Waterloo</h2>
+        <h2 className='label'>University of Waterloo</h2>
         <h3 className='label col2'>Computer Science, Business Option, Combinatorics and Optimization Minor</h3>
         <Row>
           {CardData.educationCards.reverse().map((card, i) => (
