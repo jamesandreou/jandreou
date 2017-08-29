@@ -13,10 +13,10 @@ export class Timeline extends Component {
         date: 'Summer 2016'
       },
       {
-        icon: require('./assets/beugo.png'),
-        place: 'Projects',
-        role: 'Graph Theory, Blobs, and More',
-        date: '2015 - 2017'
+        icon: require('./assets/uber.png'),
+        place: 'Uber',
+        role: 'Software Engineering Intern',
+        date: 'Summer 2017'
       }
     ]
     this.eventsLeft = [

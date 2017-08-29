@@ -1,5 +1,13 @@
 export const experienceCards = [
   {
+    place : 'Uber',
+    icon : require('./assets/uber.png'),
+    role : 'Software Engineering Intern',
+    date : 'Summer 2017',
+    description: 'I interned on the Logistics team (Dispatch for UberEats). I added the ability for operations to boost different vehicle types like bicycles or walkers in a particular geo area or restaurant. My main project was investigating new models to improve the pre-dispatch ETA calculation. After experimenting, I implemented a Gradient Boosted Tree model reducing ETA error by 15%, driving / waiting time by 4% and total trip time by 2%!',
+    tech: ['Java', 'Go', 'Python', 'JavaScript']
+  },
+  {
     place : 'Google',
     icon : require('./assets/google.png'),
     role : 'Software Engineering Intern',
@@ -7,7 +15,7 @@ export const experienceCards = [
     description: 'During my internship at Google I created a natural language processing tool for Adword\'s reporting. I created a back end translation system and modified Google\'s NLP library to support contextual queries allowing users to build reports with multiple queries. I worked with user research and product management to create a front end experience that validated NLP queries in real time.',
     tech: ['c++', 'Java', 'Web']
   },
-    {
+  {
     place : 'Mozilla',
     icon : require('./assets/firefox.png'),
     role : 'Software Engineering Intern',
@@ -93,6 +101,17 @@ export const educationCards = [
       'CS 458 - Computer Security and Privacy',
       'ECON 220 - Entrepreneurship Principles',
       'SPCOM 223 - Public Speaking'
+    ]
+  },
+  {
+    term: '4B',
+    date: 'Fall 2017',
+    courses: [
+      'CS 458 - Computer Security and Privacy',
+      'STAT 442 - Data Visualization',
+      'CO 456 - Intro to Game Theory',
+      'AFM 131 - Intro to Business in N.A.',
+      'PHIL 215 - Professional & Business Ethics'
     ]
   }
 ]
