@@ -96,9 +96,9 @@ export const educationCards = [
     term: '4A',
     date: 'Winter 2017',
     courses: [
-      'CS 489 - Machine Learning',
+      'CS 489 - Special Topics (Machine Learning)',
+      'CS 489 - Special Topics (Big Data)',
       'CS 454 - Distributed Systems',
-      'CS 458 - Computer Security and Privacy',
       'ECON 220 - Entrepreneurship Principles',
       'SPCOM 223 - Public Speaking'
     ]
